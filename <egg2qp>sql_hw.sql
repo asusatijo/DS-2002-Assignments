@@ -45,7 +45,7 @@ ORDER BY
 -- Part 2
 USE egg2qp;
 
-CREATE TABLE Customer (
+CREATE TABLE IF NOT EXISTS Customer (
     CustomerID INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
@@ -53,7 +53,7 @@ CREATE TABLE Customer (
     Phone VARCHAR(15)
 );
 
-CREATE TABLE Invoice (
+CREATE TABLE IF NOT EXISTS Invoice (
     InvoiceID INT AUTO_INCREMENT PRIMARY KEY,
     CustomerID INT,
     InvoiceDate DATE,
